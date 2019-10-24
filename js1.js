@@ -22,8 +22,10 @@
         "миллионов", "миллион", "миллиона", "миллиона", "миллиона", "миллионов", "миллионов", "миллионов", "миллионов", "миллионов",
         "миллиардов", "миллиард", "миллиарда", "миллиарда", "миллиарда", "миллиардов", "миллиардов", "миллиардов", "миллиардов", "миллиардов"];
     var M = new Array(10);
+
     for (j = 0; j < 10; ++j)
         M[j] = new Array(N.length);
+
     for (i = 0; i < N.length; i++)
         for (j = 0; j < 10; j++)
             M[j][i] = N[k++]
@@ -31,6 +33,7 @@
     var K = new Array("копеек", "копейка", "копейки", "копейки", "копейки", "копеек", "копеек", "копеек", "копеек", "копеек");
     function num2str(money, target) {
         rub = "", kop = "";
+        
         money = money.replace(",", ".");
         if (isNaN(money)) {
             document.getElementById(target).innerHTML = "Не числовое значение";
@@ -59,6 +62,8 @@
         kop == 0 ? res += " ноль " + K[0] : 0;
         document.getElementById(target).innerHTML = (minus + res).substr(0, 1).toUpperCase() + (minus + res).substr(1);
     }
+
+
     function propis(price, D) {
         litera = "";
         for (i = 0; i < price.length; i += 3) {
@@ -87,5 +92,5 @@
         if (start > price.length) return 0;
         else return Number(price.substr(price.length - start, len));
     }
-    // ]]>
+    
     
