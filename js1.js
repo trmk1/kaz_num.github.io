@@ -86,7 +86,7 @@ function num2str(money, target, target_kz) {
         }
         else rub_kz = money;
         if (rub_kz.length > 12) {
-            document.getElementById(target).innerHTML = "Тым көп сан";
+            document.getElementById(target_kz).innerHTML = "Тым көп сан";
             return
         }
         ru = propis(price = rub_kz, R);
