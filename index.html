@@ -5,20 +5,18 @@
   <title></title>
   <link rel="stylesheet" href="style.css" />
   <script type="text/javascript" src="js1.js"></script>
-  <script type="text/javascript" src="js_kaz.js"></script>
-   
 </head>
 <body>
     <div id="container" align="center">
     <div class="main">
         <div class="main_in_main">
             <div class="content">
-              Санды енгізіңіз / Введите число
+              Введите число
                       <!--Поле для ввода числа-->
-                      <input type="text" onKeyUp="num2str(this.value, 'str')"/>
+                      <input type="text" onKeyUp="num2str(this.value, 'str', 'strkaz')"/>
                       <!--Поле для вывода числа прописью-->
-                     <br> "RU"<div id="str"></div>
-                     <br> "KZ"<div id="strkaz"></div>
+                      <br>"RU"<div id="str"></div>
+                      <br>"KZ"<div id="strkaz"></div>
             </div>
         </div>
     </div>
@@ -26,3 +24,4 @@
     
 </body>
 </html>
+
