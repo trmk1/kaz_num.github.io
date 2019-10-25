@@ -38,7 +38,7 @@ function num2str(money, target, target_kz) {
 	   money = money.replace(",", ".");
         if (isNaN(money)) {
             document.getElementById(target).innerHTML = "Не числовое значение";
-			document.getElementById(target_kz).innerHTML = "Тым көп cан";
+	    document.getElementById(target_kz).innerHTML = "Тым көп cан";
             return
         }
         if (money.substr(0, 1) == "-") {
