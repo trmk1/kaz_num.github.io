@@ -29,9 +29,13 @@
             M[j][i] = N[k++]
     var R = new Array("рублей", "рубль", "рубля", "рубля", "рубля", "рублей", "рублей", "рублей", "рублей", "рублей");
     var K = new Array("копеек", "копейка", "копейки", "копейки", "копейки", "копеек", "копеек", "копеек", "копеек", "копеек");
-    function num2str(money, target) {
-        rub = "", kop = "";
-        money = money.replace(",", ".");
+  
+// фунцция число в текст  
+
+function num2str(money, target, target_kz) {
+        rub = "", kop = "";  rub_kz = "", kop_kz = ""; 
+       
+	   money = money.replace(",", ".");
         if (isNaN(money)) {
             document.getElementById(target).innerHTML = "Не числовое значение";
             return
@@ -59,6 +63,9 @@
         kop == 0 ? res += " ноль " + K[0] : 0;
         document.getElementById(target).innerHTML = (minus + res).substr(0, 1).toUpperCase() + (minus + res).substr(1);
     }
+
+
+
     function propis(price, D) {
         litera = "";
         for (i = 0; i < price.length; i += 3) {
