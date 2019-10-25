@@ -1,4 +1,4 @@
-    // 
+        // 
     var money;
     var price;
     var rub, kop;
@@ -38,14 +38,17 @@ function num2str(money, target, target_kz) {
 	   money = money.replace(",", ".");
         if (isNaN(money)) {
             document.getElementById(target).innerHTML = "Не числовое значение";
-	    document.getElementById(target_kz).innerHTML = "Сандық емес мән";	
+			document.getElementById(target_kz).innerHTML = "Сандық емес мән";
             return
         }
+		// на русс 
+		// если число отрицательное то минус
         if (money.substr(0, 1) == "-") {
             money = money.substr(1);
             minus = "минус "
         }
         else minus = "";
+		
         money = Math.round(money * 100) / 100 + "";
         if (money.indexOf(".") != -1) {
             rub = money.substr(0, money.indexOf("."));
@@ -63,6 +66,38 @@ function num2str(money, target, target_kz) {
         ru == "Ноль " + R[0] && ko != "" ? res = ko : 0;
         kop == 0 ? res += " ноль " + K[0] : 0;
         document.getElementById(target).innerHTML = (minus + res).substr(0, 1).toUpperCase() + (minus + res).substr(1);
+		// конец  на русс 
+		
+		
+		// на каз 
+		// если число отрицательное то минус
+        if (money.substr(0, 1) == "-") {
+            money = money.substr(1);
+            minus_kaz = "минус "
+        }
+        else minus_kaz = "";
+		
+	
+        money = Math.round(money * 100) / 100 + "";
+        if (money.indexOf(".") != -1) {
+            rub_kz = money.substr(0, money.indexOf("."));
+            kop_kz = money.substr(money.indexOf(".") + 1);
+            if (kop_kz.length == 1) kop_kz += "0";
+        }
+        else rub_kz = money;
+        if (rub_kz.length > 12) {
+            document.getElementById(target).innerHTML = "Тым көп сан";
+            return
+        }
+        ru = propis(price = rub_kz, R);
+        ko = propis(price = kop_kz, K);
+        ko != "" ? res = ru + " " + ko : res = ru;
+        ru == "Ноль " + R[0] && ko != "" ? res = ko : 0;
+        kop == 0 ? res += " ноль " + K[0] : 0;
+        document.getElementById(target_kz).innerHTML = (minus_kaz + res).substr(0, 1).toUpperCase() + (minus_kaz + res).substr(1);
+		// конец  на каз 
+		
+		
     }
 
 
