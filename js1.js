@@ -1,4 +1,8 @@
     // 
+/* ----------------------------
+ Сумма прописью на JavaScript
+ Author: Mad Max 2005
+ ---------------------------- */
     var money;
     var price;
     var rub, kop;
