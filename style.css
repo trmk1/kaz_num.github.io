@@ -7,18 +7,13 @@
     font-size: 11px;
     color: #000;
 }
-#container {
-    width:400px; /*Ширина блока*/
-    height:200px; /*Высота блока*/
-    margin:0 auto;
-    overflow:visible;
-    position:absolute;
-    left:50%;
-    top:50%;
-    margin-left:-200px; /*Смещаем блок на половину всей ширины влево*/
-    margin-top:-100px; /*Смещаем блок на половину высоты вверх*/
-    background:#ffffff;
+#str {
+    border: 3px solid red; /* задаём границу */
+    background:#fff00f;
 }
+
+#container {
+}    
 .main {
     height:100%;
 }
