@@ -1,8 +1,8 @@
         // 
     var money;
     var price;
-    var rub, kop;
-    var litera = sotny = desatky = edinicy = minus = "";
+    var rub, kop, rub_kz, kop_kz;
+    var litera = sotny = desatky = edinicy = minus = minus_kaz = "";
     var k = 0, i, j;
 
   Nkaz = ["", "бір", "екі", "үш", "төрт", "бес", "алты", "жеті", "сегіз", "тоғыз",
