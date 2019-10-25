@@ -38,6 +38,7 @@ function num2str(money, target, target_kz) {
 	   money = money.replace(",", ".");
         if (isNaN(money)) {
             document.getElementById(target).innerHTML = "Не числовое значение";
+	    document.getElementById(target_kz).innerHTML = "Сандық емес мән";	
             return
         }
         if (money.substr(0, 1) == "-") {
