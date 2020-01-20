@@ -7,12 +7,15 @@
     color: #000;
 }
 #str, #strkaz {
+	font-size: 16px;
+	color: #00000;
+	font-family: Arial;
     border: 3px solid red; /* задаём границу */
     background:#fff00f;
 }
 
 #container {
-width:400px; /*Ширина блока*/
+width:600px; /*Ширина блока*/
 height:200px; /*Высота блока*/
 margin:0 auto;
 overflow:visible;
