@@ -15,9 +15,9 @@ N = ["", "бір", "екі", "үш", "төрт", "бес", "алты", "жеті
     "", "одиннадцать", "двенадцать", "тринадцать", "четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать",
     "", "он", "жиырма", "отыз", "қырық", "елу", "алпыс", "жетпіс", "сексен", "тоқсан",
     "", "жүз", "екі жүз", "үш жүз", "төрт жүз", "бес жүз", "алты жүз", "жеті жүз", "сегіз жүз", "тоғыз жүз",
-    "тысяч", "тысяча", "тысячи", "тысячи", "тысячи", "тысяч", "тысяч", "тысяч", "тысяч", "тысяч",
-    "миллионов", "миллион", "миллиона", "миллиона", "миллиона", "миллионов", "миллионов", "миллионов", "миллионов", "миллионов",
-    "миллиардов", "миллиард", "миллиарда", "миллиарда", "миллиарда", "миллиардов", "миллиардов", "миллиардов", "миллиардов", "миллиардов"];
+    "мың", "мың", "мың", "мың", "мың", "мың", "мың", "мың", "мың", "мың",
+    "миллион", "миллион", "миллион", "миллион", "миллион", "миллион", "миллион", "миллион", "миллион", "миллион",
+    "миллиард", "миллиард", "миллиард", "миллиард", "миллиард", "миллиард", "миллиард", "миллиард", "миллиард", "миллиард"];
 
 var M = new Array(10);
 for (j = 0; j < 10; ++j)
@@ -59,17 +59,21 @@ function num2str(money, target) {
 
     ru = propis(price = rub, R);
     ko = propis(price = kop, K);
-    ko != "" ? res = ru + " " + ko : res = ru;
-    ru == "Ноль " + R[0] && ko != "" ? res = ko : 0;
-    kop == 0 ? res += " ноль " + K[0] : 0;
-    document.getElementById(target).innerHTML = (minus + res).substr(0, 1).toUpperCase() + (minus + res).substr(1);
+	
+ko != "" ? res = ru + " " + ko : res = ru;
+		ru == "Ноль " + R[0] && ko != "" ? res = ko : 0;
+		kop == 0 ? res += " ноль " + K[0] : 0;
+		document.getElementById(target).innerHTML = (minus + res).substr(0, 1).toUpperCase() + (minus + res).substr(1);
+	
+	
+	
 }
 
 function propis(price, D) {
     litera = "";
-    for (i = 0; i < price.length; i += 3) {
+    for (i = 0; i < price.length; i += 3) { // если  от 1 до 999
         sotny = desatky = edinicy = "";
-        if (n(i + 2, 2) > 10 && n(i + 2, 2) < 20) {
+        if (n(i + 2, 2) > 10 && n(i + 2, 2) < 20) { // от 10 до 19
             edinicy = " " + M[n(i + 1, 1)][1] + " " + M[0][i / 3 + 3];
             i == 0 ? edinicy += D[0] : 0;
         }
@@ -94,4 +98,29 @@ function n(start, len) {
     if (start > price.length) return 0;
     else return Number(price.substr(price.length - start, len));
 }
+
+/* ************************ */
+	//цепляем событие на onclick кнопки
+		var button = document.getElementById('userButton');
+		button.addEventListener('click', function () {
+		  //нашли наш контейнер
+		  var ta = document.getElementById('str'); 
+		  //производим его выделение
+		  var range = document.createRange();
+		  range.selectNode(ta); 
+		  window.getSelection().addRange(range); 
+		 
+		  //пытаемся скопировать текст в буфер обмена
+		  try { 
+			document.execCommand('copy'); 
+		  } catch(err) { 
+			console.log('Can`t copy, boss'); 
+		  } 
+		  //очистим выделение текста, чтобы пользователь "не парился"
+		  window.getSelection().removeAllRanges();
+		});
+		
+/* ******************************** */
+
+
 // ]]>
