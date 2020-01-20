@@ -3,6 +3,11 @@
  Сумма прописью на JavaScript
  Author: Mad Max 2005
  ---------------------------- */
+ 
+ 
+ 
+
+ 
 var money;
 var price;
 var rub, kop;
@@ -98,29 +103,3 @@ function n(start, len) {
     if (start > price.length) return 0;
     else return Number(price.substr(price.length - start, len));
 }
-
-/* ************************ */
-	//цепляем событие на onclick кнопки
-		var button = document.getElementById('userButton');
-		button.addEventListener('click', function () {
-		  //нашли наш контейнер
-		  var ta = document.getElementById('str'); 
-		  //производим его выделение
-		  var range = document.createRange();
-		  range.selectNode(ta); 
-		  window.getSelection().addRange(range); 
-		 
-		  //пытаемся скопировать текст в буфер обмена
-		  try { 
-			document.execCommand('copy'); 
-		  } catch(err) { 
-			console.log('Can`t copy, boss'); 
-		  } 
-		  //очистим выделение текста, чтобы пользователь "не парился"
-		  window.getSelection().removeAllRanges();
-		});
-		
-/* ******************************** */
-
-
-// ]]>
