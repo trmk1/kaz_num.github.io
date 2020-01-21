@@ -17,8 +17,8 @@
 }
 
 #container {
-width:800px; /*Ширина блока*/
-height:200px; /*Высота блока*/
+width:600px; /*Ширина блока*/
+height:400px; /*Высота блока*/
 margin:0 auto;
 overflow:visible;
 position:absolute;
