@@ -17,11 +17,11 @@
 }
 
 #container {
- margin:0 auto;/*Центрирование блока*/
+        margin:0 auto;/*Центрирование блока*/
 	background:#ccc;/*Цвет блока*/
 	position: relative ;
-width: 100%;
-height: 100%;
+        width: 95%;
+        height: 100%;
 	width:auto;/*Ширина в зависимости от разрешения экрана*/
 }     
 .main {
