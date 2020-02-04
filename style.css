@@ -20,7 +20,7 @@
         margin:0 auto;/*Центрирование блока*/
 	background:#ccc;/*Цвет блока*/
 	position: relative ;
-        width: 95%;
+        max-width 800px;
         height: 100%;
 	width:auto;/*Ширина в зависимости от разрешения экрана*/
 }     
