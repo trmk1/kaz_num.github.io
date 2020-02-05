@@ -1,7 +1,7 @@
     body {
     margin:0;
     padding:0;
-   background-image: url(' 	fon-kurazh.jpg')  ;
+   background-image: url('fon-kurazh.jpg')  ;
 	    background-position: left bottom; /* Положение фона */
     background-repeat: repeat-x; /* Повторяем фон по горизонтали */
     font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
