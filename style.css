@@ -24,6 +24,7 @@
 	position: relative ;
         max-width: 800px;
         height: 100%;
+	 border-radius: 5px; /* Уголки */
 	#width:auto;/*Ширина в зависимости от разрешения экрана*/
 }     
 .main {
