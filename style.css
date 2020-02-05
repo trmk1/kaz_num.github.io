@@ -29,6 +29,7 @@
 .main {
     width:90%; /*Ширина блока*/
     height:100%;  
+	 margin:0;
 }
 .main_in_main { 
     height:100%; 
