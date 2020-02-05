@@ -1,7 +1,9 @@
     body {
     margin:0;
     padding:0;
-   background-image: url('http://f77724n1.beget.tech/image/bg.jpg')  repeat-y center;;
+   background-image: url('http://f77724n1.beget.tech/image/bg.jpg')  ;
+	    background-position: left bottom; /* Положение фона */
+    background-repeat: repeat-x; /* Повторяем фон по горизонтали */
     font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
     font-size: 11px;  
     color: #000;  
