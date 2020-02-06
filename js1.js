@@ -40,7 +40,7 @@ function num2str(money, target) {
         minus = "минус "
     }
     else minus = "";
-    money = Math.round(money * 100) / 100 + "";
+    money = Math.round(money * 100) / 100 + ""; 
 
     if (money.indexOf(".") != -1) {
         rub = money.substr(0, money.indexOf("."));
